@@ -1,6 +1,6 @@
 # Script de Automação Google Docs
 
-Este é um script Python projetado para automatizar a substituição de campos em um documento específico no Google Docs. Ele utiliza a API do Google Docs para realizar tarefas como a substituição de texto, exportação do documento modificado como um arquivo PDF e restauração do documento à sua forma original. Abaixo estão as principais funcionalidades e instruções de uso:
+Este é um script Python projetado para automatizar a substituição de campos em um documento específico no Google Docs. Ele utiliza a API do Google Docs e do Google Drive para realizar tarefas como a substituição de texto, exportação do documento modificado como um arquivo PDF e restauração do documento à sua forma original. Abaixo estão as principais funcionalidades e instruções de uso:
 
 ## Pré-requisitos
 Antes de executar o script, certifique-se de ter realizado as seguintes etapas:
