@@ -2,6 +2,15 @@
 
 Este é um script Python projetado para automatizar a substituição de campos em um documento específico no Google Docs. Ele utiliza a API do Google Docs e do Google Drive para realizar tarefas como a substituição de texto, exportação do documento modificado como um arquivo PDF e restauração do documento à sua forma original. Abaixo estão as principais funcionalidades e instruções de uso:
 
+
+
+## Exemplo: 
+Google Doc qual ID foi passado como DOCUMENT_ID dentro do código:
+"O aluno** [nome] **de **CPF [cpf]** e **RG [rg]** está matriculado nesta escola."
+
+PDF que é gerado:
+"O aluno **Jhon Doe** de **CPF 123.456.789-11** e **RG 12.345.678-9** está matriculado nesta escola."
+
 ## Pré-requisitos
 Antes de executar o script, certifique-se de ter realizado as seguintes etapas:
 
