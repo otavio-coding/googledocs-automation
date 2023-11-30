@@ -7,11 +7,11 @@ Este é um script Python projetado para automatizar a substituição de campos e
 ## Exemplo: 
 Google Doc qual ID foi passado como DOCUMENT_ID dentro do código:
 
-"O aluno **[nome]** de **CPF [cpf]** e **RG [rg]** está matriculado nesta escola."
+"O aluno **[nome]** inscrito sob o **CPF [cpf]** e **RG [rg]** está matriculado nesta escola."
 
 PDF que é gerado:
 
-"O aluno **Jhon Doe** de **CPF 123.456.789-11** e **RG 12.345.678-9** está matriculado nesta escola."
+"O aluno **Jhon Doe** inscrito sob o **CPF 123.456.789-11** e **RG 12.345.678-9** está matriculado nesta escola."
 
 ## Pré-requisitos
 Antes de executar o script, certifique-se de ter realizado as seguintes etapas:
