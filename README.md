@@ -5,11 +5,11 @@ This is a Python script designed to automate field replacement in a specific doc
 ## Example:
 Google Doc whose ID was passed as DOCUMENT_ID within the code:
 
-"The student **[name]** registered under the **CPF [cpf]** and **RG [rg]** is enrolled in this school."
+"The student **[name]** registered under the **SIN number [sin]** and **ID [id]** is enrolled in this school."
 
 Generated PDF:
 
-"The student **Jhon Doe** registered under the **CPF 123.456.789-11** and **RG 12.345.678-9** is enrolled in this school."
+"The student **Jhon Doe** registered under the **SIN number 123.456.789-11** and **ID 12.345.678-9** is enrolled in this school."
 
 ## Prerequisites
 Before running the script, make sure you have completed the following steps:
