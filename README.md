@@ -25,17 +25,16 @@ Before running the script, make sure you have completed the following steps:
 
 
 ## Usage
-1. When running the script, you will be prompted for the CSV row ID with the data to be used. Enter the desired value.
 
-2. The script reads a CSV file, in this case, AlunosAtivos.csv, to obtain student information based on the provided subscription.
+1. When running the script, it reads a CSV file row by row, in this case, RecipientsList.csv, to obtain recipient's information..
 
-3. Student data is replaced in the corresponding placeholders in the Google document using the Google Docs API.
+2. Recipient data is replaced in the corresponding placeholders in the Google document using the Google Docs API.
 
-4. The document is exported as a PDF file on Google Drive, and the resulting file is saved locally.
+3. The document is exported as a PDF file on Google Drive, and the resulting file is saved locally.
 
-5. After the export, the placeholders in the document are reverted to their original form.
+4. After the export, the placeholders in the document are reverted to their original form.
 
-Progress and any errors are displayed in the console.
+5. Progress and any errors are displayed in the console.
 
 Note: Ensure that the appropriate permissions have been granted to the account associated with the credentials to access and modify the document and export the PDF file.
 
