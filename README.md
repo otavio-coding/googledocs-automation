@@ -30,7 +30,7 @@ Before running the script, make sure you have completed the following steps:
 
 2. Recipient data is replaced in the corresponding placeholders in the Google document using the Google Docs API.
 
-3. The document is exported as a PDF file on Google Drive, and the resulting file is saved locally.
+3. The document is exported as a PDF file on Google Drive, and the resulting file is saved locally in a folder called "GeneratedDocs".
 
 4. After the export, the placeholders in the document are reverted to their original form.
 
