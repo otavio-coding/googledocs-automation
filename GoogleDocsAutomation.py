@@ -16,10 +16,13 @@ import time
 def google_auth():
     """Authenticates the app, see full documentation at
     https://developers.google.com/docs/api/quickstart/python?hl=pt-br"""
+
     SCOPES = ['https://www.googleapis.com/auth/documents', 'https://www.googleapis.com/auth/drive']
     creds = None
+
     if os.path.exists('token.json'):
         creds = Credentials.from_authorized_user_file('token.json', SCOPES)
+
     if not creds or not creds.valid:
         if creds and creds.expired and creds.refresh_token:
             creds.refresh(Request())
@@ -31,10 +34,9 @@ def google_auth():
     return creds
 
 
-creds = google_auth()
-
-
 def today_date_string(language, string_format):
+    """Creates a string using the language stated as first parameter and the format in second parameter
+    If you call today_date_string(en_US, %B d% Y%) it returns 'Month dd yyyy', e.g November 11 2023"""
     # Sets the language for the date format, here we're using Brazilian Portuguese (pt_BR).
     locale.setlocale(locale.LC_ALL, language)
     current_date = date.today()
@@ -42,6 +44,8 @@ def today_date_string(language, string_format):
 
 
 def create_copy(template_id, drive_service):
+    """Creates a copy of the file which ID was passed as first parameter and returns the ID of the copy."""
+
     copy_title = 'Copy Title'
     body = {
         'name': copy_title
@@ -54,9 +58,8 @@ def create_copy(template_id, drive_service):
 
 def generate_file(row):
     global creds
-    # "docs_service" is used to interact with Google Docs.
+    # Starts a service with Google Docs and Google Drive.
     docs_service = build('docs', 'v1', credentials=creds)
-    # "drive_service" is used to interact with Google Drive.
     drive_service = build('drive', 'v3', credentials=creds)
 
     template_id = '1f4XmlfH5N1Cde2mhZPkEsQYAIRq6259AczLbvjz_q_0'
@@ -104,6 +107,9 @@ def main():
     end_time = time.time()  # Record the end time
     elapsed_time = end_time - start_time
     print(f"Total execution time: {elapsed_time} seconds")
+
+
+creds = google_auth()
 
 
 if __name__ == '__main__':
