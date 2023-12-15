@@ -11,7 +11,7 @@ import csv
 import time
 
 
-def main(recipient_sub):
+def generate_files(recipient_sub):
     # Authenticates the app, see full documentation at https://developers.google.com/docs/api/quickstart/python?hl=pt-br
     SCOPES = ['https://www.googleapis.com/auth/documents', 'https://www.googleapis.com/auth/drive']
     DOCUMENT_ID = '1f4XmlfH5N1Cde2mhZPkEsQYAIRq6259AczLbvjz_q_0'
@@ -82,9 +82,19 @@ def main(recipient_sub):
         print(err)
 
 
+def main():
+    start_time = time.time()  # Record the start time
+
+    with open('RecipientsList.csv') as file:
+        reader = csv.DictReader(file)
+        next(reader)
+        for row in reader:
+            generate_files(row["SUBS"])
+
+    end_time = time.time()  # Record the end time
+    elapsed_time = end_time - start_time
+    print(f"Total execution time: {elapsed_time} seconds")
+
+
 if __name__ == '__main__':
-        with open('RecipientsList.csv') as file:
-            reader = csv.DictReader(file)
-            next(reader)
-            for row in reader:
-                main(row["SUBS"])
+    main()
