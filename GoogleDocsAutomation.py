@@ -3,7 +3,7 @@ from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
 # from googleapiclient.errors import HttpError
-import multiprocessing
+import concurrent.futures
 
 
 from datetime import date, datetime
@@ -98,8 +98,8 @@ def main():
         rows = list(reader)
         print(len(rows))
 
-    with multiprocessing.Pool() as pool:
-        pool.map(generate_file, rows)
+    with concurrent.futures.ThreadPoolExecutor() as executor:
+        executor.map(generate_file, rows)
 
     end_time = time.time()  # Record the end time
     elapsed_time = end_time - start_time
